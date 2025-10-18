@@ -8,11 +8,25 @@ import styles from "./page.module.css";
 export default function Home() {
   const [name, setName] = useState("");
 
+  const handlePokemonInput = (e) => {
+    setName(e.target.value);
+  } 
+
+  const submitPokemon = (e) => {
+    e.PreventDefault();
+    console.log("this is the pokemon you're looking for", name)
+  }
   return (
     <div className={styles.page}>
       <main className={styles.main}>
         <div>
-          <input type="text" value={name} onChange={(e) => setName(e.target.value)}/>
+          <form onSubmit={submitPokemon}>
+            <label>
+              Enter Pokemon Name Below:
+            <input type="text" value={name} onChange={handlePokemonInput}/>
+            </label>
+            <button type="submit">submit</button>
+          </form>
         </div>
       </main>
       <footer className={styles.footer}>
