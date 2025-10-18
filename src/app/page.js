@@ -22,7 +22,9 @@ export default function Home() {
         <div>
           <form onSubmit={submitPokemon}>
             <label>
-              Enter Pokemon Name Below:
+              <span>
+                Enter Pokemon Name Below:
+              </span>
             <input type="text" value={name} onChange={handlePokemonInput}/>
             </label>
             <button type="submit">submit</button>
