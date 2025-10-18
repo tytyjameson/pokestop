@@ -3,6 +3,7 @@
 import React, { useState } from 'react';
 
 import Image from "next/image";
+import PokemonDataDisplay from './components/pokemonDataDisplay';
 import styles from "./page.module.css";
 
 export default function Home() {
@@ -16,6 +17,8 @@ export default function Home() {
     e.PreventDefault();
     console.log("this is the pokemon you're looking for", name)
   }
+
+  
   return (
     <div className={styles.page}>
       <main className={styles.main}>
