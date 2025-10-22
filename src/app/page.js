@@ -7,6 +7,7 @@ import PokemonDataDisplay from './components/pokemonDataDisplay';
 import styles from "./page.module.css";
 
 export default function Home() {
+  const API_KEY='8e2809a3-ee01-4482-8f81-bbbd087febf4';//API from card site and tcg
   const [name, setName] = useState("");
 
   const handlePokemonInput = (e) => {
@@ -17,7 +18,16 @@ export default function Home() {
     e.PreventDefault();
     console.log("this is the pokemon you're looking for", name)
   }
-
+  const pokemon = fetch('https://api.pokemontcg.io/v2/cards/<id>',{
+    method: 'GET',
+    headers:{
+      'X-Api-Key': ''//delete key before PR. 
+      },
+    })
+    .then((response) => response.json())
+    .then((data) => console.log('this is the data retreived', data))
+    .catch((err) => console.log('ERROR:', err))
+   
   
   return (
     <div className={styles.page}>
