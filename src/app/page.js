@@ -7,21 +7,21 @@ import PokemonDataDisplay from './components/pokemonDataDisplay';
 import styles from "./page.module.css";
 
 export default function Home() {
-  const API_KEY='8e2809a3-ee01-4482-8f81-bbbd087febf4';//API from card site and tcg
+  const API_KEY='';//API from card site and tcg
   const [name, setName] = useState("");
 
-  const handlePokemonInput = (e) => {
-    setName(e.target.value);
+  const handlePokemonInput = (event) => {
+    setName(event.target.value);
   } 
 
-  const submitPokemon = (e) => {
-    e.PreventDefault();
+  const submitPokemon = (event) => {
+    event.preventDefault();
     console.log("this is the pokemon you're looking for", name)
   }
   const pokemon = fetch('https://api.pokemontcg.io/v2/cards/<id>',{
     method: 'GET',
     headers:{
-      'X-Api-Key': ''//delete key before PR. 
+      'X-Api-Key': API_KEY,
       },
     })
     .then((response) => response.json())
@@ -40,7 +40,7 @@ export default function Home() {
               </span>
             <input type="text" value={name} onChange={handlePokemonInput}/>
             </label>
-            <button type="submit">submit</button>
+            <button type="submit">Submit</button>
           </form>
         </div>
       </main>
