@@ -16,18 +16,19 @@ export default function Home() {
 
   const submitPokemon = (event) => {
     event.preventDefault();
-    console.log("this is the pokemon you're looking for", name)
+    console.log("this is the pokemon you're looking for", name);
+    fetch(`https://api.pokemontcg.io/v2/cards`, {
+      method: 'GET',
+      mode: 'cors',
+      headers:{
+        'X-Api-Key': API_KEY,
+        },
+      })
+      .then((response) => response.json())
+      .then((data) => console.log('this is the data retreived', data))
+      .catch((err) => console.log('ERROR:', err))
+      // console.log('this is the pokemon call via name query',pokemon)
   }
-  const pokemon = fetch('https://api.pokemontcg.io/v2/cards/<id>',{
-    method: 'GET',
-    headers:{
-      'X-Api-Key': API_KEY,
-      },
-    })
-    .then((response) => response.json())
-    .then((data) => console.log('this is the data retreived', data))
-    .catch((err) => console.log('ERROR:', err))
-   
   
   return (
     <div className={styles.page}>
