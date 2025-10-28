@@ -11,7 +11,7 @@ const pokemonDataDisplay = () =>{
 
     return(
         <div id="dispay-container">
-          <h3 id="name">{pokemonName}</h3>
+          <h3 id="name">{displayName}</h3>
 
         </div>
     )

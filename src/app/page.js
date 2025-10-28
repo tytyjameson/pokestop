@@ -44,6 +44,9 @@ export default function Home() {
             <button type="submit">Submit</button>
           </form>
         </div>
+        <div id="dataDisplay">
+          <PokemonDataDisplay />
+        </div>
       </main>
       <footer className={styles.footer}>
       </footer>
