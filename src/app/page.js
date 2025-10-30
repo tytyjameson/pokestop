@@ -45,7 +45,7 @@ export default function Home() {
           </form>
         </div>
         <div id="dataDisplay">
-          <PokemonDataDisplay />
+          <PokemonDataDisplay name={name} />
         </div>
       </main>
       <footer className={styles.footer}>
