@@ -12,7 +12,9 @@ export default function Home() {
 
   const handlePokemonInput = (event) => {
     setName(event.target.value);
+  
   } 
+//set up a proxy in order to make api call
 
   const submitPokemon = (event) => {
     event.preventDefault();
