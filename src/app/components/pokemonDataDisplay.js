@@ -11,7 +11,8 @@ const pokemonDataDisplay = (props) =>{
 
     return(
         <div id="dispay-container">
-          <h3 id="name">{props.displayName}</h3>
+          <h3 id="name">{displayName}</h3>
+          <h5 id="cardSet">{cardSet}</h5>
 
         </div>
     )
