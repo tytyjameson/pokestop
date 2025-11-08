@@ -10,6 +10,7 @@ const pokemonDataDisplay = (props) =>{
    const [ tcgplayerMidPrice, setTcgplayerMidPrice ] = useState("");
 
     return(
+      //this might change 
         <div id="dispay-container">
           <div id="mainData">
             <h3 id="name">{displayName}</h3>
