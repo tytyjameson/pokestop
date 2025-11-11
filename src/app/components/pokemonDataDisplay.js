@@ -13,7 +13,9 @@ const pokemonDataDisplay = (props) =>{
       //this might change 
         <div id="dispay-container">
           <div id="mainData">
-            <h3 id="name">{displayName}</h3>
+            <div id="name">
+              <h3 id="name">{displayName}</h3>
+            </div>
             <img id="image">{image}</img>
             <h5 id="cardSet">{cardSet}</h5>
             <h6 id="midPrice">{tcgplayerMidPrice}</h6>
