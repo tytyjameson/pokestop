@@ -32,7 +32,6 @@ function Home({pokemonData}) {
     setName(event.target.value);
   
   } 
-//set up a proxy in order to make api call
 
   const submitPokemon = (event) => {
     event.preventDefault();
