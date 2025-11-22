@@ -6,7 +6,7 @@ import Image from "next/image";
 import PokemonDataDisplay from './components/pokemonDataDisplay';
 import styles from "./page.module.css";
 
-//hold this here for now, have to make API call from the backend 
+//going to change layout to dispaly current cards and counts from sets
 export const getStaticProps = async () => {
   const API_KEY='90ec5b1d-ba3f-4743-9487-4259b89eb628';//API from card site and tcg
     const response = await fetch(`https://api.pokemontcg.io/v2/cards`, {
