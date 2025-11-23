@@ -53,6 +53,7 @@ function Home({pokemonData}) {
             <button type="submit">Submit</button>
           </form>
         </div>
+        {/* changing the format to display collections and cards in each series*/}
         <div id="dataDisplay">
           <PokemonDataDisplay name={name} />
         </div>
